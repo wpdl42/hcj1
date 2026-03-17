@@ -1,0 +1,98 @@
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+body {
+  color: #333;
+  background-color: linen;
+  font-size: 20px;
+  line-height: 1.5;
+}
+/* body 의 색상 폰트 등 변경 */
+
+ul {
+  list-style-type: none; /* ul의 기본 스타일 제거 (글머리 기호 제거) */
+}
+
+.container {
+  max-width: 1100px; /* container의 최대 너비 설정 */
+  margin: 0 auto; /* container를 화면 중앙에 배치 */
+  padding: 0 30px; /* container 내부에 좌우 패딩 추가 */
+
+  /* background-color: violet;     container의 배경색을 보라색으로 설정 */
+}
+/* .container 클래스는 페이지의 주요 콘텐츠를 감싸는 역할을 하며, 너비를 80%로 설정하고 중앙에 배치합니다. 패딩을 추가하여 내부 여백을 줍니다. */
+/* container 를 html에서 2개 선언 후 두곳에 전부 적용 */
+/* ctrl + / */
+
+.main {
+  color: blue;
+  line-height: 1.5; /* 줄 간격을 1.5로 설정하여 텍스트 사이의 간격을 늘립니다. */
+}
+
+.right-image {
+  float: right;
+  margin: -250px 0 20px 20px;
+  max-width: 40%;
+  height: auto;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  height: 60px; /* 네비게이션 바의 높이를 60px로 설정 */
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex; /* ul 요소를 flex 컨테이너로 설정하여 자식 요소들을 가로 방향으로 배치 */
+  flex-direction: row; /* ul 요소를 가로 방향으로 배치 */
+}
+
+.navbar ul li {
+  /* .navbar 클래스 내의 ul 요소의 li 요소에 대한 스타일 설정 */
+  margin-left: 20px; /* ul의 li 요소에 왼쪽 마진을 추가하여 간격을 줌 */
+}
+
+.navbar a {
+  /* .navbar 클래스 내의 a 요소에 대한 스타일 설정 */
+  color: white; /* 링크의 색상을 흰색으로 설정 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  font-size: 20px; /* 링크의 폰트 크기를 20px로 설정 */
+  font-weight: bold; /* 링크의 폰트 두께를 굵게 설정 */
+}
+
+.navbar a:hover {
+  /* .navbar 클래스 내의 a 요소에 마우스를 올렸을 때의 스타일 설정 */
+  border-bottom: 2px solid white; /* 링크에 마우스를 올렸을 때 밑줄 대신 하단에 흰색 실선 추가 */
+  color: #ddd; /* 링크에 마우스를 올렸을 때 색상을 밝은 회색으로 변경 */
+}
+
+.navbar .logo {
+  font-size: x-large; /* 로고의 폰트 크기를 24px로 설정 */
+  font-weight: bolder; /* 로고의 폰트 두께를 굵게 설정 */
+}
+
+button {
+  padding: 5px 10px; /* 버튼의 상하 패딩을 5px, 좌우 패딩을 10px로 설정 그 패딩은 여유 공간. 4개 면 상,하,좌,우 하나씩 가능 */
+  margin: 10px; /* 버튼의 모든 면에 10px의 마진을 추가하여 주변 요소와의 간격을 줌. 이웃과 거리두기*/
+  font-size: large;
+  font-weight: bold;
+  background-color: lightgray;
+  border-width: 1px; /* 버튼의 테두리 두께를 1px로 설정 */
+  border-radius: 5px; /* 버튼의 테두리를 둥글게 설정 */
+}
+
+button:hover {
+  background-color: gray; /* 버튼에 마우스를 올렸을 때 배경색을 회색으로 변경 */
+  color: #fff; /* 버튼에 마우스를 올렸을 때 글자 색상을 흰색으로 변경 */
+}

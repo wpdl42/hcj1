@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 여기는 메뉴 입니다. -->
+    <nav class="navbar"> <!-- 네비 바 -->
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+            <!-- a.href 입력-->
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--메인 섹션-->
+    <section class="main">
+      <div class="container">
+        <h1>연락처</h1>
+        <p>중부대학교 정보보호학과 아무개</p>
+        <p>전화   : 010-1234-5678</p>
+        <p>이메일 : abc@email.com</p>
+        <img class="right-image" src="dog.jpeg" alt="user" />
+
+        <p>현재시간: <span id="time"></span></p>
+        <hr />
+
+        
+        <p>
+          배워봅시다:
+          <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button> <!-- 버튼에 마우스를 올렸을 때 showhtml() 함수가 실행되어 HTML5 관련 이미지와 설명이 표시되고, 마우스를 뗄 때 hide() 함수가 실행되어 이미지와 설명이 숨겨집니다. -->
+          <button onmouseover="showcss()" onmouseout="hide()">CSS</button>
+          <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
+        </p>
+        <hr />
+        <br />
+        <div>
+          <img id="fig" height="200px" />
+          <p id="desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script> <!-- main.js 파일 연결 -->
+  </body>
+</html>
+  </body>
+</html>
+
+<!--
+  link   </head> 안쪽에 넣음 
+script src
+<nav class="naverbar">
+    <div class="container">
+        
+        <div.class="container"> = div 태그에 container 라는 클래스를 줌
+        <div class="navbar"> 
+
+ctrl + / = 주석처리
+      
+
+            
+        . = 클래스
+        </ul>
+alt + shift + 방향키 아래 = 아래로 복사
+        div 영역을 나타내는 태그
+
+section class="main">
+
+alt + 방향키 = 옮기기
+
+
+<html lang="en">
+    <body>
+        <section class="main">
+            <h1>웹프로그랴밍. web programming.</h1>
+
+            <h3> 웹 개발자를 위한 온라인 메뉴얼
+                <a href="https://www.w3schools.com/">MDN Web Docs</a>    
+            
+            
+            </h3>
+
+            <p>
+                웹프로그래밍의 3가지 요소 :
+                <a href="https://www.w3schools.com/html/default.asp"
+                >HTML</a>,
+                <a href="https://www.w3schools.com/css/default.asp"
+                >CSS</a>,
+                <a href="https://www.w3schools.com/js/default.asp"
+                >JavaScript</a>
+            </p>
+            <p>현재시간 : <span id="time"></span></p>
+
+            <hr />
+
+            <p>배경색 바꾸기
+
+            <p>
+                <button>blue</button>
+                <button>green</button>
+                <button>red</button>
+            </p>
+            <hr />
+            <br />
+            <div>
+                <img id="fig" height="200px" />
+                <p id="desc"></p>
+            </div>
+        </section>
+    </body>
+</html>
+-->
+
