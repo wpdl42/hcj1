@@ -42,7 +42,33 @@
       h2 {
         font-size: 2.5em;
         font-weight: bold;
-        transition: color 0.4s ease; /* 색상 변경 시 부드럽게 */
+        background: linear-gradient(
+          90deg,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet,
+          red,
+          orange,
+          yellow
+        );
+        background-size: 400% 100%; /* 배경을 넓게 잡아 자연스럽게 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowScroll 5s linear infinite;
+      }
+
+      @keyframes rainbowScroll {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
       }
     </style>
 
@@ -60,28 +86,6 @@
         <br />
 
         <p>현재시간: <span id="time"></span></p>
-        <script>
-          const rainbowText = document.getElementById('rainbowText')
-
-          // 무지개 색상 배열
-          const rainbowColors = [
-            'red',
-            'orange',
-            'green',
-            'blue',
-            'indigo',
-            'violet',
-          ]
-          let index = 0
-
-          function changeColor() {
-            rainbowText.style.color = rainbowColors[index]
-            index = (index + 1) % rainbowColors.length // 끝까지 가면 다시 처음으로
-          }
-
-          // 3초마다 색상 변경
-          setInterval(changeColor, 400)
-        </script>
 
         <br />
         <div>
