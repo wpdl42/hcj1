@@ -38,14 +38,50 @@
       </script>
     </nav>
     <!--메인 섹션-->
+    <style>
+      h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        transition: color 0.4s ease; /* 색상 변경 시 부드럽게 */
+      }
+    </style>
+
     <section class="main">
       <div class="container">
         <h1>About 소개</h1>
         <p>웹 프로그래밍 배우는 중 입니다.</p>
         <p>이것은 웹 프로그래밍 수업의 데모 페이지입니다.</p>
-        <p>수정 테스트</p>
+        <br />
+        <hr />
+        <h2 id="rainbowText">새로운 기능 NEW!!</h2>
+        <p>*custom color 기능이 추가되었습니다.</p>
+        <p>*다른 페이지에서 배경색이 유지됩니다.</p>
+        <hr />
+        <br />
 
         <p>현재시간: <span id="time"></span></p>
+        <script>
+          const rainbowText = document.getElementById('rainbowText')
+
+          // 무지개 색상 배열
+          const rainbowColors = [
+            'red',
+            'orange',
+            'green',
+            'blue',
+            'indigo',
+            'violet',
+          ]
+          let index = 0
+
+          function changeColor() {
+            rainbowText.style.color = rainbowColors[index]
+            index = (index + 1) % rainbowColors.length // 끝까지 가면 다시 처음으로
+          }
+
+          // 3초마다 색상 변경
+          setInterval(changeColor, 400)
+        </script>
 
         <br />
         <div>
