@@ -10,7 +10,8 @@
 
   <body>
     <!-- 여기는 메뉴 입니다. -->
-    <nav class="navbar"> <!-- 네비 바 -->
+    <nav class="navbar">
+      <!-- 네비 바 -->
       <div class="container">
         <div class="logo">WebDemo</div>
         <ul class="nav">
@@ -18,14 +19,23 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/about.html">About</a>
             <!-- a.href 입력-->
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/contact.html">Contact</a>
           </li>
         </ul>
       </div>
+      <script>
+        // 페이지 로드 시 저장된 색상 적용
+        window.onload = function () {
+          const savedColor = localStorage.getItem('themeColor')
+          if (savedColor) {
+            document.body.style.backgroundColor = savedColor
+          }
+        }
+      </script>
     </nav>
     <!--메인 섹션-->
     <section class="main">
@@ -33,41 +43,10 @@
         <h1>About 소개</h1>
         <p>웹 프로그래밍 배우는 중 입니다.</p>
         <p>이것은 웹 프로그래밍 수업의 데모 페이지입니다.</p>
-
-        <h3>
-          웹 개발자를 위한 온라인 매뉴얼:
-          <a href="https://www.w3schools.com/"
-            >W3Schools: 웹프로그래밍 매뉴얼</a
-          >
-        </h3>
-
-        <p>
-          웹프로그래밍의 3가지 요소:
-          <a href="https://www.w3schools.com/html/default.asp">HTML5</a> 
-          <a href="https://www.w3schools.com/css/default.asp">CSS3</a> 
-          <a href="https://www.w3schools.com/js/default.asp">Javascript</a>
-        </p>
+        <p>수정 테스트</p>
 
         <p>현재시간: <span id="time"></span></p>
-        <hr />
 
-        <p>
-          배경색 바꾸기:
-          <button onclick="pink()">Pink</button> <!-- 버튼 클릭 시 pink() 함수가 실행되어 배경색이 핑크로 변경됩니다. -->
-          <button onclick="lightblue()">Lightblue</button>
-          <button onclick="yellow()">Yellow</button>
-          <button onclick="linen()">Linen</button>
-        <!-- -->
-          <button onclick="colorChange()">Custom Color</button>
-        </p>
-      
-        <p>
-          배워봅시다:
-          <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button> <!-- 버튼에 마우스를 올렸을 때 showhtml() 함수가 실행되어 HTML5 관련 이미지와 설명이 표시되고, 마우스를 뗄 때 hide() 함수가 실행되어 이미지와 설명이 숨겨집니다. -->
-          <button onmouseover="showcss()" onmouseout="hide()">CSS</button>
-          <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
-        </p>
-        <hr />
         <br />
         <div>
           <img id="fig" height="200px" />
@@ -76,9 +55,8 @@
       </div>
     </section>
 
-    <script src="main.js"></script> <!-- main.js 파일 연결 -->
-  </body>
-</html>
+    <script src="main.js"></script>
+    <!-- main.js 파일 연결 -->
   </body>
 </html>
 
@@ -146,4 +124,3 @@ alt + 방향키 = 옮기기
     </body>
 </html>
 -->
-

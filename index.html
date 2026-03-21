@@ -18,11 +18,11 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/about.html">About</a>
             <!-- a.href 입력-->
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -51,14 +51,38 @@
 
         <p>
           배경색 바꾸기:
-          <button onclick="pink()">Pink</button> <!-- 버튼 클릭 시 pink() 함수가 실행되어 배경색이 핑크로 변경됩니다. -->
-          <button onclick="lightblue()">Lightblue</button>
-          <button onclick="yellow()">Yellow</button>
-          <button onclick="linen()">Linen</button>
+          <button onclick="changeColor('pink')">Pink</button> <!-- 버튼 클릭 시 pink() 함수가 실행되어 배경색이 핑크로 변경됩니다. -->
+          <button onclick="changeColor('lightblue')">Lightblue</button>
+          <button onclick="changeColor('yellow')">Yellow</button>
+          <button onclick="changeColor('linen')">Linen</button>
         <!-- -->
           <button onclick="colorChange()">Custom Color</button>
+          <script>
+            // 페이지 로드 시 저장된 색상 적용
+            window.onload = function() { // 페이지가 로드될 때 실행되는 함수입니다.
+              const savedColor = localStorage.getItem("themeColor"); // localStorage에서 "themeColor"라는 키로 저장된 색상 값을 가져옵니다.
+              if (savedColor) { // 저장된 색상 값이 존재하는 경우
+                document.body.style.backgroundColor = savedColor; // 가져온 색상 값을 페이지의 배경색으로 적용합니다.
+              }
+            };
+
+            // 색상 변경 및 저장
+            function changeColor(color) { // changeColor 함수는 색상 값을 인자로 받아 배경색을 변경하고, 변경된 색상을 localStorage에 저장하는 역할을 합니다.
+              document.body.style.backgroundColor = color; // 전달된 색상 값을 페이지의 배경색으로 적용합니다.
+              localStorage.setItem("themeColor", color); // localStorage에 "themeColor"라는 키로 전달된 색상 값을 저장합니다. 이렇게 하면 페이지를 새로고침하거나 다시 방문할 때 저장된 색상이 유지됩니다.
+            }
+          </script>
+        
+        
         </p>
-      
+
+
+
+         
+  
+
+
+        
         <p>
           배워봅시다:
           <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button> <!-- 버튼에 마우스를 올렸을 때 showhtml() 함수가 실행되어 HTML5 관련 이미지와 설명이 표시되고, 마우스를 뗄 때 hide() 함수가 실행되어 이미지와 설명이 숨겨집니다. -->

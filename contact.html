@@ -18,15 +18,24 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/about.html">About</a>
             <!-- a.href 입력-->
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
+    <script>
+          // 페이지 로드 시 저장된 색상 적용
+          window.onload = function() {
+          const savedColor = localStorage.getItem("themeColor");
+          if (savedColor) {
+          document.body.style.backgroundColor = savedColor;
+          }
+        };
+    </script>
     <!--메인 섹션-->
     <section class="main">
       <div class="container">
@@ -37,16 +46,7 @@
         <img class="right-image" src="dog.jpeg" alt="user" />
 
         <p>현재시간: <span id="time"></span></p>
-        <hr />
-
         
-        <p>
-          배워봅시다:
-          <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button> <!-- 버튼에 마우스를 올렸을 때 showhtml() 함수가 실행되어 HTML5 관련 이미지와 설명이 표시되고, 마우스를 뗄 때 hide() 함수가 실행되어 이미지와 설명이 숨겨집니다. -->
-          <button onmouseover="showcss()" onmouseout="hide()">CSS</button>
-          <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
-        </p>
-        <hr />
         <br />
         <div>
           <img id="fig" height="200px" />

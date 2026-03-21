@@ -44,7 +44,7 @@ function showcss() {
 function showjs() {
   document.getElementById('fig').src = 'javascript.png'
   document.getElementById('desc').innerHTML =
-    '<span style="color: green;"><b>JavaScript</b></span>는 웹 개발에서 사용되는 프로그래밍 언어입니다.'
+    '<span style="color: green;"><b>JavaScript</b></span>는 웹 개발에서 사용되는 프로그래밍 언어입니다.' //
 }
 
 function hide() {
