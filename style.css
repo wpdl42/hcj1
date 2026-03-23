@@ -28,7 +28,7 @@ ul {
 /* ctrl + / */
 
 .main {
-  color: blue;
+  color: rgb(87, 87, 87);
   line-height: 1.5; /* 줄 간격을 1.5로 설정하여 텍스트 사이의 간격을 늘립니다. */
 }
 
@@ -40,7 +40,7 @@ ul {
 }
 
 .navbar {
-  background-color: black;
+  background-color: rgb(254, 175, 79);
   color: white;
   height: 60px; /* 네비게이션 바의 높이를 60px로 설정 */
 }
