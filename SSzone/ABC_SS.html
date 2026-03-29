@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit.php" method="post"> <!-- 폼이 제출될 때 데이터를 처리할 서버 측 스크립트의 URL을 지정 -->
+        <label for="name">Name:</label> <!-- label 요소는 입력 필드에 대한 설명을 제공하며, for 속성은 해당 입력 필드의 id와 일치해야 함 -->
+        <input type="text" id="name" name="name" required> <!-- input 요소는 사용자로부터 데이터를 입력받는 필드이며, type 속성은 입력 유형을 지정하고, required 속성은 필수 입력 필드임을 나타냄 -->
+        <br><br>
+        <label for="email">Email:</label> 
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <input type="submit" value="Submit">
+</body>
+</html>

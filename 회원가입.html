@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 여기는 메뉴 입니다. -->
+    <nav class="navbar">
+      <!-- 네비 바 -->
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+            <!-- a.href 입력-->
+          </li>
+          <li>
+            <a href="/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="/Update.html">Update</a>
+          </li>
+          <li>
+            <a href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // 페이지 로드 시 저장된 색상 적용
+        window.onload = function () {
+          const savedColor = localStorage.getItem('themeColor')
+          if (savedColor) {
+            document.body.style.backgroundColor = savedColor
+          }
+        }
+      </script>
+    </nav>
+    <h2>회원가입</h2>
+    <form action="">
+      <fieldset>
+        <legend>회원가입</legend>
+
+        <label for="user-id">아이디</label>
+        <br />
+        <input
+          type="text"
+          id="user-id"
+          size="50"
+          value=""
+          maxlength="20"
+          placeholder="사용할 아이디를 입력해주세요"
+        />
+        <br />
+        <label for="user-pw">비밀번호</label>
+        <br />
+        <input
+          type="text"
+          id="user-id"
+          size="50"
+          value=""
+          minlength="8"
+          maxlength="20"
+          placeholder="8자 이상 입력하세요"
+        />
+        <form><br />
+      <label for="phone">전화번호</label><br />
+      <input
+        type="tel"
+        id="phone"
+        size="50"
+        name="phone"
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+        placeholder="010-1234-5678"
+      /><br />
+      <form>
+      <label for="email">이메일</label><br />
+      <input type="email" id="email" name="email" size="50" placeholder="abc@gmail.com"/>
+    </form>
+    </form>
+        <br />
+        <br />
+        <input type="submit" value="회원가입" />
+        <input type="reset" value="새로고침" />
+      </fieldset>
+  </body>
+</html>

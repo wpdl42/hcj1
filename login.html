@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 여기는 메뉴 입니다. -->
+    <nav class="navbar">
+      <!-- 네비 바 -->
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+            <!-- a.href 입력-->
+          </li>
+          <li>
+            <a href="/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="/Update.html">Update</a>
+          </li>
+          <li>
+            <a href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // 페이지 로드 시 저장된 색상 적용
+        window.onload = function () {
+          const savedColor = localStorage.getItem('themeColor')
+          if (savedColor) {
+            document.body.style.backgroundColor = savedColor
+          }
+        }
+      </script>
+    </nav>
+    <h2>로그인</h2>
+    <form action="">
+      <fieldset>
+        <legend>로그인</legend>
+
+        <label for="user-id">아이디</label>
+        <br />
+        <input
+          type="text"
+          id="user-id"
+          size="50"
+          value=""
+          maxlength="20"
+          placeholder="아이디를 입력해주세요"
+        />
+        <!-- placeholder 속성은 입력 필드에 대한 힌트 텍스트를 제공 
+        -->
+        <!-- value 속성은 입력 필드의 초기값을 설정 -->
+        <br />
+        <label for="user-pw">비밀번호</label>
+        <br />
+        <input
+          type="text"
+          id="user-id"
+          size="50"
+          value=""
+          maxlength="20"
+          placeholder="비밀번호를 입력해주세요"
+        />
+        <br />
+        <br />
+        <input type="submit" value="로그인" />
+        <input type="reset" value="새로고침" />
+        <input type="button" value="회원가입" onclick="location.href='회원가입.html'" />
+      </fieldset>
+       
+  </body>
+</html>

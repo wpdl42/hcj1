@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" cellspacing="0" cellpadding="5">
+      <caption>
+        상품 구성
+      </caption>
+      <tr>
+        <th>용도</th>
+        <th>가격</th>
+        <th>수량</th>
+        <th>제품명</th>
+      </tr>
+      <tr>
+        <td rowspan="2">선물</td>
+        <!-- 두 줄을 합침  rowspan은 세로 방향으로 합치는 것 -->
+        <td>[10,000]</td>
+        <td>>5</td>
+        <td>청소기</td>
+      </tr>
+      <tr>
+        <td>[20,000]</td>
+        <td>>3</td>
+        <td>건조기</td>
+      </tr>
+      <tr>
+        <td>기부</td>
+        <td>[15,000]</td>
+        <td colspan="2">미지정</td>
+        <!-- 두 칸을 합침 colspan은 가로 방향으로 합치는 것 -->
+      </tr>
+    </table>
+  </body>
+</html>

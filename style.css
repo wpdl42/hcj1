@@ -96,3 +96,25 @@ button:hover {
   background-color: gray; /* 버튼에 마우스를 올렸을 때 배경색을 회색으로 변경 */
   color: #fff; /* 버튼에 마우스를 올렸을 때 글자 색상을 흰색으로 변경 */
 }
+
+/* 스크롤 바 숨김 */
+
+/* 크롬, 엣지, 사파리 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* 스크롤 바 숨김 */
+}
+
+/* 파이어폭스 */
+html,
+body {
+  scrollbar-width: none; /* 스크롤 바 숨김 */
+}
+
+/* IE, 구버전 Edge */
+html,
+body {
+  -ms-overflow-style: none; /* 스크롤 바 숨김 */
+}
+
+/* 메뉴 누르면 아래에 이동 가능한 목록 표시*/

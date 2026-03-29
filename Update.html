@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 여기는 메뉴 입니다. -->
+    <nav class="navbar">
+      <!-- 네비 바 -->
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+            <!-- a.href 입력-->
+          </li>
+          <li>
+            <a href="/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="/Update.html">Update</a>
+          </li>
+          <li>
+            <a href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      // 페이지 로드 시 저장된 색상 적용
+      window.onload = function () {
+        const savedColor = localStorage.getItem('themeColor')
+        if (savedColor) {
+          document.body.style.backgroundColor = savedColor
+        }
+      }
+    </script>
+    <style>
+      h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        background: linear-gradient(
+          90deg,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet,
+          red,
+          orange,
+          yellow
+        );
+        background-size: 400% 100%; /* 배경을 넓게 잡아 자연스럽게 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowScroll 5s linear infinite;
+      }
+
+      @keyframes rainbowScroll {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+    </style>
+    <section class="main">
+      <div class="container">
+        <h1>업데이트 내역</h1>
+        <p>2026년 03월</p>
+
+        <br />
+        <hr />
+        <!--여기 있는 것들 업데이트 메뉴 만들어서 옮기기-->
+        <h2 id="rainbowText">새로운 기능 NEW!!</h2>
+        <ol>
+          <li>custom color 기능이 추가되었습니다.</li>
+          <li>다른 페이지에서 배경색이 유지됩니다.</li>
+          <li>무지개로 빛나는 글자가 추가되었습니다.</li>
+          <li>스크롤 바가 숨겨집니다.</li>
+          <li>Update 메뉴가 추가되었습니다.</li>
+          <li>about에 시간표와 음악, 영상이 추가되었습니다.</li>
+          <li>login 페이지와 회원가입 입력 폼이 추가되었습니다.</li>
+          <li>이곳은 list를 활용한 목록입니다.</li>
+        </ol>
+
+        <br />
+        <div>
+          <img id="fig" height="200px" />
+          <p id="desc"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
